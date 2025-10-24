@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garage91 - Individual Hit Count</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #121212; color: #ffffff; text-align: center; padding: 50px; }
+    .container { background: #1f1f1f; padding: 40px; border-radius: 10px; max-width: 400px; margin: auto; box-shadow: 0 0 10px #ff5e00; }
+    h2 { color: #ff5e00; }
+    input { width: 100%; padding: 10px; margin: 10px 0; border-radius: 6px; border: none; background: #2b2b2b; color: white; }
+    button { background: #ff5e00; border: none; padding: 10px 20px; border-radius: 6px; color: white; font-weight: 600; cursor: pointer; transition: 0.3s; }
+    button:hover { background: #ff7b29; }
+    p { font-size: 18px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Garage91 Individual Page Hits</h2>
+    <form action="IndividualCountServlet" method="post">
+      <input type="text" name="username" placeholder="Enter your name" required>
+      <button type="submit">Submit & View Count</button>
+    </form>
+  </div>
+</body>
+</html>

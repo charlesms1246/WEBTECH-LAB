@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <servlet>
+    <servlet-name>TotalCountServlet</servlet-name>
+    <servlet-class>TotalCountServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>TotalCountServlet</servlet-name>
+    <url-pattern>/TotalCountServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>IndividualCountServlet</servlet-name>
+    <servlet-class>IndividualCountServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>IndividualCountServlet</servlet-name>
+    <url-pattern>/IndividualCountServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>
