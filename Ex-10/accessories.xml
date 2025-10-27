@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="styles.xsl"?>
+<garage91>
+  <accessory>
+    <name>LED Lights</name>
+    <price>1500</price>
+    <stock>50</stock>
+  </accessory>
+  <accessory>
+    <name>Alloy Wheels</name>
+    <price>5000</price>
+    <stock>20</stock>
+  </accessory>
+  <accessory>
+    <name>Car Cover</name>
+    <price>1200</price>
+    <stock>100</stock>
+  </accessory>
+</garage91>

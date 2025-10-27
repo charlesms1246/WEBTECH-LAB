@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Garage91 - Access XML via HTML</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #121212; color: #ffffff; text-align: center; padding: 20px; }
+    .container { background: #1f1f1f; padding: 30px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 0 10px #ff5e00; }
+    h2 { color: #ff5e00; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #ff5e00; color: white; padding: 10px; }
+    td { padding: 10px; border-bottom: 1px solid #2b2b2b; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Garage91 Accessories (via HTML/JS)</h2>
+    <table id="accessoryTable">
+      <tr><th>Name</th><th>Price</th><th>Stock</th></tr>
+    </table>
+  </div>
+
+  <script>
+    // Load and parse XML using JavaScript (DOM)
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        const xmlDoc = this.responseXML;
+        const accessories = xmlDoc.getElementsByTagName("accessory");
+        const table = document.getElementById("accessoryTable");
+
+        for (let i = 0; i < accessories.length; i++) {
+          const row = table.insertRow();
+          row.insertCell(0).innerHTML = accessories[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+          row.insertCell(1).innerHTML = accessories[i].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+          row.insertCell(2).innerHTML = accessories[i].getElementsByTagName("stock")[0].childNodes[0].nodeValue;
+        }
+      }
+    };
+    xhttp.open("GET", "accessories.xml", true);
+    xhttp.send();
+  </script>
+</body>
+</html>
