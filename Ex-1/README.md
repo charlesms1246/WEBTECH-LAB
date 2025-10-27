@@ -1,0 +1,1 @@
+Mapped parts are: Tyres, Headlight Grill, Backrest and Mobile Holder
